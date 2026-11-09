@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <style>
+    /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<table>
+    <tr>
+        <th>Device</th>
+        <th>Datacenter</th>
+        <th>CPU Usage</th>
+    </tr>
+
+    {% for result in results %}
+    <tr>
+        <td>{{ result.device }}</td>
+        <td>{{ result.datacenter }}</td>
+        <td class="{% if result.cpu > 80 %}warning{% endif %}">
+            {{ result.cpu }}%
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
