@@ -1,2 +1,2 @@
-# doc-py-boilerplates
+# doc-py-boilerplate
 A repository to hold python boilerplate code
